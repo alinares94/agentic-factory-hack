@@ -220,7 +220,7 @@ az deployment group create \
 
 Go to the [Azure Portal](https://portal.azure.com/) and find your resource group, which should now contain resources like this:
 
-![Azure Portal Resources](./images/azure-portal-resources.png)
+![Azure Portal Resources](./images/challenge-0-azure-portal-resources.png)
 
 ---
 
@@ -391,21 +391,6 @@ chmod +x challenge-0/seed-data.sh
 
 </details>
 
-<details>
-<summary>Problem: Can't connect to Cosmos DB</summary>
-
-```bash
-# Get connection string
-az cosmosdb keys list \
-  --name $COSMOS_NAME \
-  --resource-group $RESOURCE_GROUP \
-  --type connection-strings
-
-# Test connectivity
-curl -X GET "$COSMOS_ENDPOINT" -H "Authorization: $COSMOS_KEY"
-```
-
-</details>
 
 ## 🧠 Conclusion and reflection
 
