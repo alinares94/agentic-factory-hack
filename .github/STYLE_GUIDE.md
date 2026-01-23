@@ -112,7 +112,7 @@ Each challenge README follows a consistent structure with the following sections
 | 4 | **Tasks** | ✅ | Step-by-step instructions |
 | 5 | **Go Further** | 🚀 | Optional stretch goals (with NOTE callout) |
 | 6 | **Troubleshooting and FAQ** | 🛠️ | Collapsible problem/solution pairs |
-| 7 | **Conclusion** | 🧠 | Recap, architecture diagram, key takeaways, further reading |
+| 7 | **Conclusion and Reflection** | 🧠 | Recap, architecture diagram, key takeaways, further reading |
 
 ### Header Format
 
@@ -181,7 +181,7 @@ Solution or explanation here.
 
 #### Conclusion
 ```markdown
-## 🧠 Conclusion
+## 🧠 Conclusion and Reflection
 
 🎉 Congratulations! Summary of what was accomplished.
 

@@ -459,7 +459,7 @@ There can be a delay of **2-5 minutes** before metrics and traces appear in the 
 
 </details>
 
-## 🧠 Conclusion
+## 🧠 Conclusion and Reflection
 
 Let’s quickly recap what we did.
 

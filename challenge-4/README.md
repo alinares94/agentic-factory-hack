@@ -80,6 +80,26 @@ With **API Management** as an A2A gateway, you get:
 
 This approach is particularly valuable in enterprise scenarios where you need to expose agents to multiple consumers while maintaining governance and control over how agents are accessed and invoked.
 
+### Agent Framework workflows
+
+The **Microsoft Agent Framework** provides *orchestrations*—pre-built workflow patterns with specially-built executors that allow developers to quickly create complex workflows by simply plugging in their own AI agents.
+
+#### Why workflows matter?
+
+Traditional single-agent systems are limited in their ability to handle complex, multi-faceted tasks. By orchestrating multiple agents, each with specialized skills or roles, you can create systems that are more robust, adaptive, and capable of solving real-world problems collaboratively.
+
+#### Supported orchestrations
+
+The **Agent Framework** supports several orchestration patterns, each suited to different scenarios:
+
+| Pattern | Description | Typical use case |
+|---------|-------------|------------------|
+| **Concurrent** | A task is broadcast to all agents and processed concurrently | Parallel analysis, independent subtasks, ensemble decision making |
+| **Sequential** | Passes the result from one agent to the next in a defined order | Step-by-step workflows, pipelines, multi-stage processing |
+| **Group Chat** | Assembles agents in a star topology with a manager controlling the flow of conversation | Iterative refinement, collaborative problem-solving, content review |
+| **Magentic** | A variant of group chat with a planner-based manager (inspired by MagenticOne) | Complex, generalist multi-agent collaboration |
+| **Handoff** | Assembles agents in a mesh topology where agents can dynamically pass control based on context without a central manager | Dynamic workflows, escalation, fallback, or expert handoff scenarios |
+
 ## ✅ Tasks
 
 > [!IMPORTANT]
@@ -244,9 +264,29 @@ echo "$AZURE_AI_PROJECT_ENDPOINT"
 
 </details>
 
-## 🧠 Conclusion
+## 🧠 Conclusion and Reflection
 
-You’ve now run an end-to-end, polyglot agent workflow hosted with Aspire. Let's reflect how the different pieces fits together.
+You've now run an end-to-end, polyglot agent workflow hosted with Aspire. Let's reflect on how the different pieces fit together.
+
+### Sequential orchestration in this challenge
+
+In this challenge, we used a **sequential orchestration** to process telemetry anomalies. The workflow passes results from one agent to the next in a defined order:
+
+```
+Anomaly Classification → Fault Diagnosis → Repair Planner → Maintenance Scheduler → Parts Ordering
+```
+
+This linear flow makes sense for our scenario because:
+
+1. **Anomaly Classification** must first determine *if* there's a problem and its severity
+2. **Fault Diagnosis** needs the classification result to identify the root cause
+3. **Repair Planner** requires the diagnosis to create an appropriate repair plan
+4. **Maintenance Scheduler** uses the repair plan to schedule the work
+5. **Parts Ordering** needs the scheduled work order to reserve required parts
+
+Each step builds on the previous one—you can't schedule maintenance without knowing what needs to be fixed, and you can't order parts without knowing when the work will happen. The sequential orchestration ensures this dependency chain is respected while keeping the workflow definition simple and readable.
+
+### Workflow architecture
 
 ![Challenge 4 workflow architecture](./images/challenge-4-workflow-architecture.png)
 
@@ -292,6 +332,7 @@ DevUI is ideal when you're focused on debugging a single agent or workflow and d
 
 If you want to expand your knowledge on what we've covered in this challenge, have a look at the content below:
 
+- [Microsoft Agent Framework Workflows](https://learn.microsoft.com/en-us/agent-framework/user-guide/workflows/overview)
 - [What is .NET Aspire?](https://aspire.dev/get-started/what-is-aspire/)
 - [Agent-to-Agent in Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/tools/agent-to-agent?view=foundry&pivots=python)
 - [Agent-to-Agent API in Azure API Management](https://learn.microsoft.com/en-us/azure/api-management/agent-to-agent-api)

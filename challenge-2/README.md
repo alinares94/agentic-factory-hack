@@ -387,6 +387,34 @@ Add structured output using `AIJsonUtilities.CreateJsonSchema`
 and `ChatResponseFormat.ForJsonSchema` for type-safe responses
 ```
 
+### Add an MCP server to GitHub Copilot
+
+In Challenge 1, you saw how agents in **Azure AI Foundry Agent Service** can use MCP tools. **GitHub Copilot** in VS Code also supports MCP servers, letting you extend Copilot's capabilities with custom tools.
+
+Try adding the **Microsoft Learn MCP server** to your **GitHub Copilot** setup:
+
+1. Open the Command Palette (Ctrl+Shift+P or Cmd+Shift+P)
+2. Run *MCP: Add Server*
+3. Select *HTTP* as the server type
+4. Enter `https://learn.microsoft.com/api/mcp` as the URL
+5. Enter `microsoft-learn` as the server ID
+6. Select *Workspace* to add the server to `.vscode/mcp.json`
+
+This creates a `.vscode/mcp.json` file with the following configuration:
+
+```json
+{
+    "servers": {
+        "microsoft-learn": {
+            "type": "http",
+            "url": "https://learn.microsoft.com/api/mcp"
+        }
+    }
+}
+```
+
+In **GitHub Copilot Chat**, you can now ask questions that leverage **Microsoft Learn** documentation—useful for questions about Azure services, .NET APIs, and other Microsoft technologies.
+
 ### Create your own custom GitHub Copilot agent
 
 In this challenge you used the `agentplanning` agent—a custom **GitHub Copilot** agent defined in `.github/agents/agentplanning.agent.md`. Try creating your own custom agent with a specific persona!
@@ -470,7 +498,7 @@ After saving the file, the `example-solution` folder will appear in the Explorer
 
 </details>
 
-## 🧠 Conclusion
+## 🧠 Conclusion and Reflection
 
 
 Let’s reflect on a few things
@@ -539,6 +567,8 @@ If you want to expand your knowledge on what we've covered in this challenge, ha
 
 - [Custom agents in VS Code](https://code.visualstudio.com/docs/copilot/customization/custom-agents)
 - [Custom instructions in VS Code](https://code.visualstudio.com/docs/copilot/customization/custom-instructions)
+- [Use MCP servers in VS Code](https://code.visualstudio.com/docs/copilot/customization/mcp-servers)
+- [Microsoft Learn MCP server](https://github.com/microsoftdocs/mcp)
 - [Spec Kit on GitHub](https://github.com/github/spec-kit)
 - [Spec-Driven Development blog post](https://developer.microsoft.com/blog/spec-driven-development-spec-kit)
 

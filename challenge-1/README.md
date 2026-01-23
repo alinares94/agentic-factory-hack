@@ -503,7 +503,7 @@ Make sure you have assigned yourself the *AI Developer* role on the **Foundry Pr
 </details>
 
 
-## 🧠 Conclusion
+## 🧠 Conclusion and Reflection
 Let’s quickly recap what we did.
 
 In [Task 1](#task-1-create-and-test-initial-anomaly-classification-agent) we created the **Anomaly Classification Agent** using a Python script.

@@ -18,16 +18,6 @@ By participating in this hackathon, you will learn how to:
 - Instrument the solution so you can inspect agent outputs, tool calls, logs, and traces during development
 - Build an end-to-end agent workflow using Microsoft Agent Framework and sequential orchestration hosted in **Aspire** with agent-to-agent (A2A) communication.
 
-## Requirements
-
-To successfully complete this hackathon, you will need the following:
-
-- [**GitHub account**](https://github.com/signup) to access the repository, run [**GitHub Codespaces**](https://github.com/features/codespaces), and use [**GitHub Copilot**](https://github.com/features/copilot)
-- Be familiar with **Python** or **.NET** programming, including handling JSON data and making API calls
-- Be familiar with Generative AI Solutions and Azure Services
-- An active **Azure subscription**, with **Owner** rights
-- Ability to provision Azure resources in `swedencentral` or [another supported region](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#global-standard-model-availability)
-
 ## Scenario
 
 This hackathon uses a fictitious tire manufacturing company as an example, but the scenario is applicable to most manufacturing environments where machines are involved in production.
@@ -105,6 +95,16 @@ The image below illustrates the architecture used throughout the hackathon.
 >
 >This hackathon uses a deliberately simplified lab setup so you can focus on the learning objectives and the core patterns of agentic development (workflow design, tool integration, and observability), rather than the full complexity of factory networking, governance, and infrastructure.
 
+## Requirements
+
+To successfully complete this hackathon, you will need the following:
+
+- [**GitHub account**](https://github.com/signup) to access the repository, run [**GitHub Codespaces**](https://github.com/features/codespaces), and use [**GitHub Copilot**](https://github.com/features/copilot)
+- Be familiar with **Python** or **.NET** programming, including handling JSON data and making API calls
+- Be familiar with Generative AI Solutions and Azure Services
+- An active **Azure subscription**, with **Owner** rights
+- Ability to provision Azure resources in `swedencentral` or [another supported region](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/concepts/models?tabs=global-standard%2Cstandard-chat-completions#global-standard-model-availability)
+
 ## Challenges
 
 This hackathon is divided into five challenges, each building on the previous one. You'll start by setting up your environment, then progressively build individual agents, and finally orchestrate them into a complete workflow.
@@ -120,7 +120,7 @@ Each challenge follows a consistent structure to help you navigate:
 | ✅ **Tasks** | Step-by-step instructions to complete the challenge |
 | 🚀 **Go Further** | Optional stretch goals if you finish early |
 | 🛠️ **Troubleshooting** | Common problems and solutions |
-| 🧠 **Conclusion** | Recap, key takeaways, and further reading |
+| 🧠 **Conclusion and Reflection** | Recap, key takeaways, and further reading |
 
 ### Challenge list
 

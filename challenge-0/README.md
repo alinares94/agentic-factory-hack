@@ -187,9 +187,12 @@ az login --use-device-code
 
 In this step, you create the resources that will be used throughout the day.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Depending on the setup for the hackathon, the Azure resources might already have been provisioned for you and you can then skip this step.
 > Check with your hackathon coach what is applicable for you.
+
+<details>
+<summary>Deploy Azure resources</summary>
 
 ```bash
 # Ensure you are located in the challenge-0 directory
@@ -213,10 +216,12 @@ az deployment group create \
 ```
 
 ⏱️ Deployment takes approximately 5-10 minutes
+
  
 > [!TIP]
 > While you are waiting for the deployment to complete, take some time to familiarize yourself with the [hackathon scenario](../README.md#scenario) and [architecture](../README.md#architecture).
 
+</details>
 
 ### Task 5: Verify the creation of your resources
 
@@ -258,12 +263,17 @@ export $(cat ../.env | xargs)
 
 ### Task 7: Assign additional permissions
 
-To perform certain tasks in the hackathon, you need additional permissions:
+To perform certain tasks in the hackathon, you need the following permissions:
 
 - `Azure AI Developer` on the **Foundry project** resource (agent/project operations)
 - `Cognitive Services OpenAI Contributor` on the **Azure OpenAI** resource (calling chat completions)
 
-If these roles have not been assigned to your user in advance, then follow the below steps to apply the required role assignments.
+> [!IMPORTANT]
+> Depending on the setup for the hackathon, the Azure roles might already have been assigned to you in advance, and you can then skip this step.
+> Check with your hackathon coach what is applicable for you.
+
+<details>
+<summary>Assign permissions</summary>
 
 > [!NOTE]
 > Role assignments can take **5–10 minutes** to fully propagate. If you still see `PermissionDenied` errors after assigning roles, wait a few minutes, then run `az login --use-device-code` again and re-export your environment variables.
@@ -292,6 +302,8 @@ az role assignment create \
 # Refresh your credentials with the new permissions
 az login --use-device-code
 ```
+
+</details>
 
 ### Task 8: Seed Factory Sample Data
 
@@ -402,7 +414,7 @@ chmod +x challenge-0/seed-data.sh
 </details>
 
 
-## 🧠 Conclusion
+## 🧠 Conclusion and Reflection
 
 This forms the foundation for your multi-agent predictive maintenance hackathon system.
 
