@@ -226,6 +226,7 @@ az deployment group create \
 > [!TIP]
 > While you are waiting for the deployment to complete, take some time to familiarize yourself with the [hackathon scenario](../README.md#scenario) and [architecture](../README.md#architecture).
 
+
 </details>
 
 ### Task 5: Verify the creation of your resources

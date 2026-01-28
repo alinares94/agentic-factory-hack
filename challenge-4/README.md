@@ -4,7 +4,7 @@ Welcome to Challenge 4!
 
 In this challenge, you’ll run a complete **agent framework workflow** that ties together everything you’ve built so far—multiple agents, multiple tech stacks, multiple hosting models—into a single application experience.
 
-**Expected duration**: 45–60 min  
+**Expected duration**: 45 min  
 **Prerequisites**: 
 - [Challenge 0](../challenge-0/README.md) successfully completed 
 - [Challenge 1](../challenge-1/README.md) successfully completed 
@@ -158,6 +158,10 @@ In the frontend, watch the *Agent Workflow* panel as the workflow progresses:
 
 You should see steps move through states (queued/working/done/error), tool calls and a request/response payload summary.
 
+You can expand the tool call details and agent output
+
+![Factory Workflow UI toolcall](./images/challenge-4-agent-workflow-ui-toolcall.png)
+
 When finished you should see something similar to this:
 
 ![Factory Agent Workflow Finished](./images/challenge-4-agent-workflow-ui-end.png)
@@ -177,6 +181,10 @@ The dashboard will start in your browser and show the resources.
 - Click on *Console* and you will see the invocation chain in the workflow
 
 ![Dashboard console](./images/challenge-4-dashboard-console.png)
+
+- Click on *Traces* and you will see call duration details
+
+![Dashboard console](./images/challenge-4-dashboard-traces.png)
 
 🎉 Congratulations! You've successfully completed Challenge 4.
 
@@ -313,7 +321,7 @@ The diagram above illustrates the full workflow in 9 steps:
 
 ❻ The **Fault Diagnosis Agent** uses remote MCP tools to call **API Management** and query **Azure AI Search**.
 
-❼ The workflow invokes the **Repair Planner Agent** locally via A2A, running in a separate .NET process. It still uses the agent registration in **Foundry**, but executes its logic locally.
+❼ The workflow invokes the **Repair Planner Agent** locally via A2A, running as a .NET application. It still uses the agent registration in **Foundry**, but executes its logic locally.
 
 ❽ The **Repair Planner Agent** queries **Cosmos DB** locally to retrieve operational data.
 

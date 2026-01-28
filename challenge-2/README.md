@@ -13,6 +13,8 @@ The goals for this challenge are:
 
 - Pair program with **GitHub Copilot**
 - Create a .NET agent using the **Foundry Agents SDK**
+- Understand the similarities between a **Coding Assistant** (like GitHub Copilot) and a **Foundry Agent**—both use instructions, tools, and an LLM to accomplish tasks
+
 
 ## 🧭 Context and Background
 
