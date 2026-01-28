@@ -242,11 +242,11 @@ curl -fsSL "$APIM_GATEWAY_URL/maintenance/tire_curing_press" -H "Ocp-Apim-Subscr
 
 ❻ Click *Create*
 
-❼ Finally, copy the *MCP Server URL* of the newly created MCP server. 
+❼ Copy the *MCP Server URL* of the newly created MCP server. 
 
 <img src="./images/challenge-1-mcp-url.png" alt="MCP URL" width="50%">
 
-❽ Add a new entry with the value in the `.env` file `MACHINE_MCP_SERVER_ENDPOINT="<MCP_SERVER_URL>"`
+❽ Finally, add a new entry with the value in the `.env` file `MACHINE_MCP_SERVER_ENDPOINT="<MCP_SERVER_URL>"`
 
 Perform the same steps to create the *Maintenance* MCP server using the following settings:
 
